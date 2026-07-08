@@ -1,0 +1,14 @@
+{
+  "name": "Login Flow Demo",
+  "description": "Exemplo de fluxo de login automatizado",
+  "steps": [
+    {"action": "wait", "seconds": 2},
+    {"action": "click", "text": "Entrar"},
+    {"action": "wait", "text": "CPF", "timeout": 5},
+    {"action": "fill", "label": "CPF", "value": "02959350146"},
+    {"action": "fill", "label": "Senha", "value": "minhasenha123"},
+    {"action": "click", "text": "Acessar"},
+    {"action": "wait", "text": "Bem-vindo", "timeout": 10},
+    {"action": "screenshot", "filename": "login_success.png"}
+  ]
+}
