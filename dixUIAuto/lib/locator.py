@@ -25,7 +25,7 @@ class Locator:
         """Calcula distância entre centros de dois elementos."""
         c1 = node1.center
         c2 = node2.center
-        return math.sqrt((c1[0] - c2[0])**2 + **(c1[1] - c2[1])2)
+        return math.sqrt((c1[0] - c2[0])**2 + (c1[1] - c2[1])**2)
     
     @staticmethod
     def is_overlapping(node1: UINode, node2: UINode) -> bool:
@@ -75,7 +75,7 @@ class Locator:
         elif position == 'center':
             screen_center = (self.screen_width // 2, self.screen_height // 2)
             return min(nodes, key=lambda n: math.sqrt(
-                (n.center[0] - screen_center[0])**2 + **(n.center[1] - screen_center[1])2
+                (n.center[0] - screen_center[0])**2 + (n.center[1] - screen_center[1])**2
             ))
         
         return nodes[0]
