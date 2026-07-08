@@ -1,0 +1,19 @@
+[
+    {
+        "action": "open_app",
+        "package": "com.app.test"
+    },
+    {
+        "action": "click",
+        "text": "Inicio"
+    },
+    {
+        "action": "fill",
+        "label": "Nome",
+        "value": "Teste"
+    },
+    {
+        "action": "screenshot",
+        "name": "resultado"
+    }
+]
