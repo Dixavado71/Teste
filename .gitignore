@@ -1,7 +1,4 @@
-```
-# Dependencies
-dixUIAuto/gui/requirements_gui.txt
-
+```gitignore
 # Python
 __pycache__/
 *.pyc
@@ -11,6 +8,12 @@ __pycache__/
 env/
 venv/
 .venv/
+.env
+.env.local
+.env.*
+.venv/
+.ENV
+.python-version
 pip-log.txt
 pip-delete-this-directory.txt
 .tox/
@@ -21,13 +24,7 @@ nosetests.xml
 coverage.xml
 *.cover
 *.log
-*.tmp
-
-# IDE
-.vscode/
-.idea/
-
-# OS
+.git/modules/
 .DS_Store
 Thumbs.db
 ```
