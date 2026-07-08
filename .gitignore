@@ -1,38 +1,39 @@
-```gitignore
-# Python
+```
+# Logs and temp files
+*.log
+dixuiauto.log
+
+# Dependencies
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
-env/
-venv/
-.venv/
-.ENV/
-.env/
 
-# Build/dist
-build/
-dist/
-*.egg-info/
+# Environment
+.env
+.env.local
+*.env.*
 
-# Testing
-.coverage
-htmlcov/
-.coverage.*
-.noserc
-.tox/
-
-# IDE
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-```
+*.tmp
 
-Wait, let me reconsider. The only modified files are `README.md` and `lib/__init__.py` - these are source files, not build artifacts or temporary files. There are no compiled files, dependency directories, or other artifacts in the changes list.
+# Build and distribution
+dist/
+build/
+*.egg-info/
 
-```gitignore
+# Testing and coverage
+.coverage
+coverage/
+htmlcov/
+.pytest_cache/
+.mypy_cache/
 
+# OS specific
+.DS_Store
+Thumbs.db
 ```
