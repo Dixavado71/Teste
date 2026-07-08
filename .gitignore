@@ -1,65 +1,33 @@
 ```
+# Dependencies
+dixUIAuto/gui/requirements_gui.txt
+
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
+env/
 venv/
-ENV/
-.env
-.venv
-env.bak
-runtime.txt
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*.tmp
-
-# Logs
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Coverage
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
 .coverage
-htmlcov/
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
-.hypothesis/
+*.log
+*.tmp
 
-# Environment
-.env
-.env.local
-.env.*
-!.env.example
+# IDE
+.vscode/
+.idea/
 
-# Testing
-.pytest_cache/
-.mypy_cache/
-.tox/
+# OS
+.DS_Store
+Thumbs.db
 ```
