@@ -1,4 +1,38 @@
-```
+```gitignore
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV/
+.env/
+
+# Build/dist
+build/
+dist/
+*.egg-info/
+
+# Testing
+.coverage
+htmlcov/
+.coverage.*
+.noserc
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+```
+
+Wait, let me reconsider. The only modified files are `README.md` and `lib/__init__.py` - these are source files, not build artifacts or temporary files. There are no compiled files, dependency directories, or other artifacts in the changes list.
+
+```gitignore
+
 ```
