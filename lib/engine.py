@@ -22,6 +22,8 @@ from lib.form import SmartForm
 from lib.watcher import Watcher
 from lib.validator import Validator
 from lib.flow import FlowEngine
+from lib.flow_builder import FlowBuilder, flow
+from lib.flow_templates import get_template, list_templates, register_template
 from config.settings import SCREENSHOTS_DIR
 
 logger = setup_logger("DixEngine")
@@ -389,3 +391,35 @@ class DixEngine:
         if self._device:
             return self._device.get_info()
         return {}
+    
+    # === Flow Builder Convenience Methods ===
+    
+    def create_flow(self, name: str = "unnamed") -> FlowBuilder:
+        """
+        Create a new flow using the fluent builder.
+        
+        Usage:
+            flow = (engine.create_flow("login")
+                .open_app("com.example.app")
+                .wait_for(text="Login")
+                .click(text="Entrar")
+                .build())
+        """
+        return FlowBuilder(name)
+    
+    def use_template(self, template_name: str, **kwargs) -> List[Dict[str, Any]]:
+        """
+        Get a flow template by name.
+        
+        Usage:
+            flow = engine.use_template("login", package="com.app", cpf="123", password="abc")
+        """
+        return get_template(template_name, **kwargs)
+    
+    def list_templates(self) -> List[str]:
+        """List all available flow templates."""
+        return list_templates()
+    
+    def register_template(self, name: str, func) -> None:
+        """Register a custom flow template."""
+        register_template(name, func)
